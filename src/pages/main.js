@@ -24,7 +24,7 @@ const MainPage = observer(() => {
         <Container
         style = {{backgroundColor:'#D0D0D0', justifyContent:'space-between', position:'relative', padding:'20px', borderRadius: '15px', width: '1240px', height: '950px', marginTop:'6px', fontFamily:"Play", paddingTop: '10px'}}>
         <Card style={{ marginLeft: '5px', marginRight: '5px', borderRadius: '7px', height: '30px', backgroundColor: '#42AAFF'}} fixed='top'></Card>
-        <div style={{ flexGrow: 1, alingItems: 'center', fontWeight: 'bold', position:'relative', display:'flex', }}>
+        <div style={{ flexGrow: 1, alingItems: 'center', fontWeight: 'bold', position:'relative'}}>
 
         <img src={Markiza2} style={{width: '140px', height:'250px', marginLeft: '35px', display: 'inline-block', marginRight:'30px'}}></img>  
         
@@ -36,24 +36,34 @@ const MainPage = observer(() => {
         style = {{backgroundColor:'#D0D0D0', justifyContent:'space-between', display:'flex', borderRadius: '15px', marginTop:'6px', fontFamily:"Play", paddingTop: '10px'}}>
           
         <Card style={{width:'300px', marginTop: '20px', borderRadius: '35px', border:'5px solid #42AAFF', backgroundColor:'#D0D0D0', marginLeft: '20px'  }}>
-          <p style={{ fontSize: '40px', display: 'flex', alignItems: 'center', textDecoration: 'underline',  marginLeft: '20px' }}>
+          
+          <p style={{ fontSize: '40px', alignItems: 'center', marginLeft: '20px' }}>
+            
             <FaUser style={{ marginRight: '5px' }}/>
-            Контакты</p>
+            Контакты
+            </p>
+          <div style={{ backgroundColor: 'black', height: '4px', position:'absolute', marginTop: '57px', width: '290px'}}>
+          </div>
           <p style={{marginLeft: '20px', fontSize: '20px'}}><FaPhone /> {resumeData.contacts.phone}</p>
           <p style={{marginLeft: '20px', fontSize: '20px'}}s><FaEnvelope /> {resumeData.contacts.email}</p>
         </Card>
 
         <Card style={{width:'370px', marginTop: '20px', borderRadius: '35px', border:'5px solid #42AAFF', backgroundColor:'#D0D0D0', marginLeft: '20px' }}>
-          <p style={{ fontSize: '40px', display: 'flex', alignItems: 'center', textDecoration: 'underline',  marginLeft: '20px' }}>
-            <FaGraduationCap style={{ marginRight: '5px' }} /> Образование
-          </p><p style={{fontSize: '25px', marginLeft: '20px'}}>
+          <p style={{ fontSize: '40px', display: 'flex', alignItems: 'center', marginLeft: '20px' }}>
+            <FaGraduationCap style={{ marginRight: '5px'}} /> Образование
+          </p>
+          <div style={{ backgroundColor: 'black', height: '4px', position:'absolute', marginTop: '55px', width: '360px'}}>
+          </div>
+          <p style={{fontSize: '25px', marginLeft: '20px'}}>
           {resumeData.education}</p>
         </Card>
 
         <Card style={{width:'370px', marginTop: '20px', borderRadius: '35px', border:'5px solid #42AAFF', backgroundColor:'#D0D0D0', marginLeft: '20px' }}>
-          <p style={{ fontSize: '40px', display: 'flex', alignItems: 'center', textDecoration: 'underline',  marginLeft: '20px' }}>
+          <p style={{ fontSize: '40px', display: 'flex', alignItems: 'center', marginLeft: '20px' }}>
             <FaBriefcase style={{ marginRight: '5px' }} /> Опыт работы
           </p>
+          <div style={{ backgroundColor: 'black', height: '4px', position:'absolute', marginTop: '54px', width: '360px'}}>
+          </div>
           <p style={{marginLeft: '20px', fontSize: '20px'}}>{resumeData.workExperience}</p>
         </Card>
 
@@ -66,17 +76,22 @@ const MainPage = observer(() => {
 
         <Container style = {{backgroundColor:'#D0D0D0', justifyContent:'space-between', display:'flex', borderRadius: '15px', marginTop:'6px', fontFamily:"Play", paddingTop: '10px'}}>
         <Card style={{width:'800px', marginTop: '20px', borderRadius: '35px', border:'5px solid #42AAFF', backgroundColor:'#D0D0D0', marginLeft: '20px' }}>
-          <p style={{ fontSize: '40px', display: 'flex', alignItems: 'center', textDecoration: 'underline',  marginLeft: '20px' }}>
+          <p style={{ fontSize: '40px', display: 'flex', alignItems: 'center',  marginLeft: '20px' }}>
             <FaInfoCircle style={{ marginRight: '5px' }} /> О себе
           </p>
+          <div style={{ backgroundColor: 'black', height: '4px', position:'absolute', marginTop: '55px', width: '790px'}}>
+          </div>
           <p style={{marginLeft: '20px', fontSize: '20px'}}>{resumeData.aboutMe}</p>
         </Card>
 
 
         <Card style={{ width:'300px', marginTop: '20px', borderRadius: '35px', border:'5px solid #42AAFF', backgroundColor:'#D0D0D0', marginLeft: '20px' }}>
-          <p style={{ fontSize: '40px', display: 'flex', alignItems: 'center', textDecoration: 'underline',  marginLeft: '20px' }}>
+          <p style={{ fontSize: '40px', display: 'flex', alignItems: 'center',  marginLeft: '20px' }}>
             <FaTools style={{ marginRight: '5px' }} /> Навыки
               </p>
+              <div style={{ backgroundColor: 'black', height: '4px', position:'absolute', marginTop: '54px', width: '290px'}}>
+              </div>
+
           <ul style={{marginLeft: '10px', fontSize: '20px'}}>
             {resumeData.skills.map((skills) => (
               <li>{skills}</li>
